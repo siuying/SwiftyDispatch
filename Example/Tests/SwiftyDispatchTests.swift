@@ -33,11 +33,11 @@ class SwiftyDispatchTests: XCTestCase {
     }
     
     func testConcurrent() {
-        let queue = Queue(qos: Queue.QOS.UserInitiated)
+        let queue = Queue.concurrent(.UserInitiated)
         expect(queue).toNot(beNil())
         expect(queue.label).to(contain("user-initiated"))
         
-        let queue2 = Queue(priority: Queue.Priority.Background)
+        let queue2 = Queue.concurrent(priority: .Background)
         expect(queue2).toNot(beNil())
         expect(queue2.label).to(contain("background"))
     }
@@ -74,16 +74,15 @@ class SwiftyDispatchTests: XCTestCase {
     }
     
     func testApply() {
-        let queue = Queue(qos: .UserInteractive)
+        let queue = Queue(label: "queue")
         var stack : [Int] = []
 
         queue.apply(5) { (i) -> Void in
-            objc_sync_enter(queue)
             stack.append(i)
-            objc_sync_exit(queue)
         }
         
         expect(stack.count).toEventually(equal(5))
+        expect(stack).toEventually(equal([0,1,2,3,4]))
     }
     
 }

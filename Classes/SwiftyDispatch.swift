@@ -48,7 +48,7 @@ public class Queue {
         }
     }
 
-    public enum QOS : Int {
+    public enum QOS : UInt {
         case UserInteractive
         case UserInitiated
         case Default
@@ -90,14 +90,6 @@ public class Queue {
         self.queue = dispatch_queue_create(labelBytes, type.value)
     }
 
-    public convenience init(qos: Queue.QOS) {
-        self.init(queue: dispatch_get_global_queue(qos.value, 0))
-    }
-
-    public convenience init(priority: Queue.Priority) {
-        self.init(queue: dispatch_get_global_queue(priority.value, 0))
-    }
-
     public func async(block: dispatch_block_t) {
         dispatch_async(self.queue, block)
     }
@@ -118,5 +110,13 @@ public class Queue {
     
     public static func main() -> Queue {
         return Queue(queue: dispatch_get_main_queue())
+    }
+    
+    public static func concurrent(qos: Queue.QOS) -> Queue {
+        return Queue(queue: dispatch_get_global_queue(qos.value, 0))
+    }
+
+    public static func concurrent(priority priority: Queue.Priority) -> Queue {
+        return Queue(queue: dispatch_get_global_queue(priority.value, 0))
     }
 }
