@@ -15,13 +15,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```swift
 // Create a serial queue
-let queue = Queue(label: "Serial", type: .Serial)
+let queue = Queue("Serial", .Serial)
 
 // Create a concurrent queue
-let queue = Queue(label: "Concurrent", type: .Concurrent)
+let queue = Queue("Concurrent", .Concurrent)
 
 // It is serial by default
-let queue = Queue(label: "Concurrent")
+let queue = Queue("Concurrent")
 
 // Get main queue
 let queue = Queue.main()
