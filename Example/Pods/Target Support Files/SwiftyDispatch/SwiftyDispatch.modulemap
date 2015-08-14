@@ -1,0 +1,6 @@
+framework module SwiftyDispatch {
+  umbrella header "SwiftyDispatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
