@@ -89,12 +89,26 @@ semaphore.wait // -> true
 
 ## Installation
 
+### Cocoapods
+
 Dispatch is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SwiftyDispatch"
 ```
+
+### Carthage
+
+You can use Carthage to install SwiftyDispatch by adding it to your Cartfile:
+
+```ruby
+github "siuying/SwiftyDispatch"
+```
+
+### Manually
+
+To use this library in your project manually, just drag all swift files under ``Classes`` to the project tree.
 
 ## TODO?
 
