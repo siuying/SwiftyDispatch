@@ -10,7 +10,9 @@ A lightweight GCD wrapper for Swift. Mostly copied from [MacRuby's Dispatch modu
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-### Create queues
+### Queue
+
+#### Create queues
 
 ```swift
 // Create a serial queue
@@ -33,7 +35,7 @@ let queue = Queue.concurrent(priority: .Background)
 
 ```
 
-### Run blocks
+#### Run blocks
 
 ```swift
 // asynchronously
@@ -48,7 +50,7 @@ queue.sync {
 
 ```
 
-### Apply
+#### Apply
 
 ```swift
 queue.apply(10) {
@@ -56,7 +58,7 @@ queue.apply(10) {
 }
 ```
 
-### After
+#### After
 
 ```swift
 queue.apply(0.3) {
@@ -65,6 +67,10 @@ queue.apply(0.3) {
 ```
 
 ### Semaphore
+
+Semaphore provides an efficient mechanism to synchronizes threads via a combination of waiting and signaling.
+
+This is especially useful for controlling access to limited resources.
 
 ```swift
 let queue = Queue("sample")
