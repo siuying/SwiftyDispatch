@@ -3,7 +3,7 @@ import XCTest
 import SwiftyDispatch
 import Nimble
 
-class SwiftyDispatchTests: XCTestCase {
+class QueueDispatchTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -63,14 +63,14 @@ class SwiftyDispatchTests: XCTestCase {
     func testAfter() {
         let begin = NSDate()
         var data : Bool = false
-        let queue = Queue("test")
+        let queue = Queue.main()
 
-        queue.after(0.1) { () -> Void in
+        queue.after(0.1) {
             data = true
+            expect(begin.timeIntervalSinceNow).to(beLessThanOrEqualTo(-0.1))
         }
 
         expect(data).toEventually(beTrue())
-        expect(begin.timeIntervalSinceNow).toEventually(beLessThanOrEqualTo(-0.1))
     }
     
     func testApply() {

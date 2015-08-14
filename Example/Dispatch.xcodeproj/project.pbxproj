@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* SwiftyDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SwiftyDispatchTests.swift */; };
+		549070151B7E363900E19FDD /* SemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549070141B7E363900E19FDD /* SemaphoreTests.swift */; };
+		607FACEC1AFB9204008FA782 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* QueueTests.swift */; };
 		621DDBF2582D81A0F8A5C433 /* Pods_Dispatch_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9168CF985BE608765AF3C1 /* Pods_Dispatch_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3921549AE4834DD8FF581CF6 /* Pods-Dispatch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dispatch_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dispatch_Tests/Pods-Dispatch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		549070141B7E363900E19FDD /* SemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemaphoreTests.swift; sourceTree = "<group>"; };
 		58289F446F0856092C48A3E4 /* Dispatch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Dispatch.podspec; path = ../Dispatch.podspec; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Dispatch_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dispatch_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* SwiftyDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyDispatchTests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		62D2F5DA228BFB4C4D6CC27F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A424CA95FB526FD4AF8272BF /* Pods-Dispatch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dispatch_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dispatch_Tests/Pods-Dispatch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D26B9AFADED16B0E9B6C23DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -57,7 +59,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* SwiftyDispatchTests.swift */,
+				607FACEB1AFB9204008FA782 /* QueueTests.swift */,
+				549070141B7E363900E19FDD /* SemaphoreTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -218,7 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* SwiftyDispatchTests.swift in Sources */,
+				549070151B7E363900E19FDD /* SemaphoreTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

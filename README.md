@@ -1,6 +1,6 @@
 # SwiftyDispatch
 
-A lightweight GCD wrapper for Swift.
+A lightweight GCD wrapper for Swift. Mostly copied from [MacRuby's Dispatch module](https://github.com/MacRuby/MacRuby/wiki/Dispatch::Queue-Class).
 
 [![Version](https://img.shields.io/cocoapods/v/SwiftyDispatch.svg?style=flat)](http://cocoapods.org/pods/SwiftyDispatch)
 [![License](https://img.shields.io/cocoapods/l/SwiftyDispatch.svg?style=flat)](http://cocoapods.org/pods/SwiftyDispatch)
@@ -64,6 +64,19 @@ queue.apply(0.3) {
 }
 ```
 
+### Semaphore
+
+```swift
+let queue = Queue("sample")
+let semaphore = Semaphore(0)
+queue.after(1.0) {
+  print "Hello"
+  semaphore.signal
+}
+semaphore.wait # -> true
+```
+
+
 ## Requirements
 
 - Swift 2.0 (Xcode 7)
@@ -83,9 +96,9 @@ pod "SwiftyDispatch"
 - [x] Async/Sync
 - [x] Apply
 - [x] After
+- [x] Semaphore
 - [ ] Barrier
 - [ ] Group
-- [ ] Semaphore
 - [ ] Source
 - [ ] Block class
 
