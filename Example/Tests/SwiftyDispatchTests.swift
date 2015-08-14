@@ -16,13 +16,13 @@ class SwiftyDispatchTests: XCTestCase {
     }
     
     func testCreate() {
-        let queue = Queue(label: "test", type: .Serial)
+        let queue = Queue("test", .Serial)
         expect(queue.label).to(equal("test"))
         
-        let concurrent = Queue(label: "concurrent", type: .Concurrent)
+        let concurrent = Queue("concurrent", .Concurrent)
         expect(concurrent.label).to(equal("concurrent"))
         
-        let defaultQueue = Queue(label: "defaultQueue")
+        let defaultQueue = Queue("defaultQueue")
         expect(defaultQueue.label).to(equal("defaultQueue"))
         
     }
@@ -44,7 +44,7 @@ class SwiftyDispatchTests: XCTestCase {
     
     func testAsync() {
         var data : Bool = false
-        let queue = Queue(label: "test")
+        let queue = Queue("test")
         queue.async { () -> Void in
             data = true
         }
@@ -53,7 +53,7 @@ class SwiftyDispatchTests: XCTestCase {
 
     func testSync() {
         var data : Bool = false
-        let queue = Queue(label: "test")
+        let queue = Queue("test")
         queue.sync { () -> Void in
             data = true
         }
@@ -63,7 +63,7 @@ class SwiftyDispatchTests: XCTestCase {
     func testAfter() {
         let begin = NSDate()
         var data : Bool = false
-        let queue = Queue(label: "test")
+        let queue = Queue("test")
 
         queue.after(0.1) { () -> Void in
             data = true
@@ -74,7 +74,7 @@ class SwiftyDispatchTests: XCTestCase {
     }
     
     func testApply() {
-        let queue = Queue(label: "queue")
+        let queue = Queue("queue")
         var stack : [Int] = []
 
         queue.apply(5) { (i) -> Void in

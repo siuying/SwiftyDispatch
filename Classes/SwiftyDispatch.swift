@@ -83,7 +83,7 @@ public class Queue {
         self.queue = queue
     }
     
-    public init(label: String, type: QueueType = .Serial) {
+    public init(_ label: String, _ type: QueueType = .Serial) {
         let labelBytes : UnsafePointer<Int8> = label.cStringUsingEncoding(NSUTF8StringEncoding)!.withUnsafeBufferPointer({
             $0.baseAddress
         })
