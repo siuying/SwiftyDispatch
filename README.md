@@ -2,7 +2,6 @@
 
 A lightweight GCD wrapper for Swift.
 
-[![CI Status](http://img.shields.io/travis/siuying/SwiftyDispatch.svg?style=flat)](https://travis-ci.org/siuying/SwiftyDispatch)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyDispatch.svg?style=flat)](http://cocoapods.org/pods/SwiftyDispatch)
 [![License](https://img.shields.io/cocoapods/l/SwiftyDispatch.svg?style=flat)](http://cocoapods.org/pods/SwiftyDispatch)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyDispatch.svg?style=flat)](http://cocoapods.org/pods/SwiftyDispatch)
