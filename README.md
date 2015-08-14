@@ -73,7 +73,7 @@ queue.after(1.0) {
   print "Hello"
   semaphore.signal
 }
-semaphore.wait # -> true
+semaphore.wait // -> true
 ```
 
 
