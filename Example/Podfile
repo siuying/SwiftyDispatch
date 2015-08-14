@@ -1,9 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-
 target 'Dispatch_Tests', :exclusive => true do
-  pod "Dispatch", :path => "../"
-
-  
+  pod "SwiftyDispatch", :path => "../"
+  pod 'Nimble', git: "https://github.com/Quick/Nimble.git", branch: "swift-2.0"
 end
