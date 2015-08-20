@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftyDispatch"
-  s.version          = "0.2.1"
+  s.version          = "0.2.2"
   s.summary          = "A lightweight GCD wrapper for Swift."
   s.homepage         = "https://github.com/siuying/SwiftyDispatch"
   s.license          = 'MIT'
