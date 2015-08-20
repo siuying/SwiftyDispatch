@@ -91,10 +91,7 @@ public struct Queue {
     /// - Parameter label: label of the queue
     /// - Parameter type: Type of the queue (QueueType)
     public init(_ label: String, _ type: QueueType = .Serial) {
-        let labelBytes : UnsafePointer<Int8> = label.cStringUsingEncoding(NSUTF8StringEncoding)!.withUnsafeBufferPointer({
-            $0.baseAddress
-        })
-        self.queue = dispatch_queue_create(labelBytes, type.value)
+        self.queue = dispatch_queue_create(label, type.value)
     }
 
     /// Run a block asynchronously
