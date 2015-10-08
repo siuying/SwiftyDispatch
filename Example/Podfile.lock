@@ -1,25 +1,17 @@
 PODS:
-  - Nimble (2.0.0-rc.2)
-  - SwiftyDispatch (0.1.0)
+  - Nimble (2.0.0)
+  - SwiftyDispatch (0.2.2)
 
 DEPENDENCIES:
-  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `swift-2.0`)
+  - Nimble
   - SwiftyDispatch (from `../`)
 
 EXTERNAL SOURCES:
-  Nimble:
-    :branch: swift-2.0
-    :git: https://github.com/Quick/Nimble.git
   SwiftyDispatch:
     :path: "../"
 
-CHECKOUT OPTIONS:
-  Nimble:
-    :commit: dbfc4ebd53395361c14eb2c9b13f629fc541bba2
-    :git: https://github.com/Quick/Nimble.git
-
 SPEC CHECKSUMS:
-  Nimble: e3cf5e73a491daf21c2bc88783dbfc55ce8b8e02
-  SwiftyDispatch: 80623c0ec862570425b8fe3e153fcb477aeb9818
+  Nimble: 472e75466819eb8c06299233e87c694a9b51328a
+  SwiftyDispatch: e6cc7d983f8a4e8b07bcd2076820c34493025960
 
 COCOAPODS: 0.38.2

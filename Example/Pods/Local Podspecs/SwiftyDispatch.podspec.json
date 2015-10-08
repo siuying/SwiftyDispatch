@@ -1,7 +1,7 @@
 {
   "name": "SwiftyDispatch",
-  "version": "0.1.0",
-  "summary": "Swift wrapper for GCD.",
+  "version": "0.2.2",
+  "summary": "A lightweight GCD wrapper for Swift.",
   "homepage": "https://github.com/siuying/SwiftyDispatch",
   "license": "MIT",
   "authors": {
@@ -9,13 +9,13 @@
   },
   "source": {
     "git": "https://github.com/siuying/SwiftyDispatch.git",
-    "tag": "0.1.0"
+    "tag": "0.2.2"
   },
   "social_media_url": "https://twitter.com/siuying",
   "platforms": {
     "ios": "8.0",
-    "osx": "10.9"
+    "osx": "10.10"
   },
   "requires_arc": true,
-  "source_files": "Classes/**/*"
+  "source_files": "Classes/**/*.swift"
 }

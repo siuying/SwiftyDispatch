@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D3CB7BD2DE9E88C375BF35D"
+               BlueprintIdentifier = "D220CA6AB5DDCCFADD7808AA"
                BuildableName = "SwiftyDispatch.framework"
                BlueprintName = "SwiftyDispatch"
                ReferencedContainer = "container:Pods.xcodeproj">
