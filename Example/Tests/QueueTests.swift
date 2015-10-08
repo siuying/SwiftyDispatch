@@ -85,4 +85,24 @@ class QueueDispatchTests: XCTestCase {
         expect(stack).toEventually(equal([0,1,2,3,4]))
     }
     
+    func testTargetQoS() {
+        var data : Bool = false
+        let queue = Queue("test", .Serial)
+        queue.setTargetQoS(Queue.QOS.Background)
+        queue.async { () -> Void in
+            data = true
+        }
+        expect(data).toEventually(beTrue())
+    }
+    
+    func testTargetPriority() {
+        var data : Bool = false
+        let queue = Queue("test", .Serial)
+        queue.setTargetPriority(Queue.Priority.Background)
+        queue.async { () -> Void in
+            data = true
+        }
+        expect(data).toEventually(beTrue())
+    }
+    
 }

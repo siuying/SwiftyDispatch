@@ -101,6 +101,16 @@ public struct Queue {
         dispatch_async(self.queue, block)
     }
 
+    /// Set Target Queue of current queue, using QoS
+    public func setTargetQoS(qos: Queue.QOS) {
+        dispatch_set_target_queue(self.queue, dispatch_get_global_queue(qos.value, 0))
+    }
+    
+    /// Set Target Queue of current queue, using priority
+    public func setTargetPriority(priority: Queue.Priority) {
+        dispatch_set_target_queue(self.queue, dispatch_get_global_queue(priority.value, 0))
+    }
+
     /// Run a block synchronously
     ///
     /// - Parameter block: The block to run
