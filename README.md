@@ -89,7 +89,7 @@ semaphore.wait // -> true
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 **SwiftyDispatch** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
